@@ -1,0 +1,211 @@
+<app-auth-navbar></app-auth-navbar>
+<main>
+  <div
+    class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
+  >
+    <div
+      class="absolute top-0 w-full h-full bg-center bg-cover"
+      style="background-image: url('../../../assets/img/home2-stb.jpg')"
+    >
+      <span
+        id="blackOverlay"
+        class="w-full h-full absolute opacity-75 bg-black"
+      ></span>
+    </div>
+    <div class="container relative mx-auto">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div class="pr-12">
+            <h1 class="text-white font-semibold text-5xl">
+              <!-- Your story starts with us. -->
+              <p>Trouvez la location idéale </p>
+              Réservez maintenant
+            </h1>
+            <!-- <p class="mt-4 text-lg text-blueGray-200">
+              This is a simple example of a Landing Page you can build using
+              Notus Angular. It features multiple CSS components based on the
+              Tailwind CSS design system.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
+      style="transform: translateZ(0)"
+    >
+      <svg
+        class="absolute bottom-0 overflow-hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        version="1.1"
+        viewBox="0 0 2560 100"
+        x="0"
+        y="0"
+      >
+        <polygon
+          class="text-blueGray-200 fill-current"
+          points="2560 0 2560 100 0 100"
+        ></polygon>
+      </svg>
+    </div>
+  </div>
+
+  <section class="pb-20 bg-blueGray-200 -mt-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+           
+          </div>
+        </div>
+
+        <div class="w-full md:w-4/12 px-4 text-center">
+          <div
+            class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+          >
+           
+          </div>
+        </div>
+
+        
+         
+      </div>
+      <span style="margin-right: 10px;">This is a space</span>
+      <span style="margin-right: 10px;">This is a space</span>
+      <h2 class="text-4xl font-semibold doctorsList">
+        <span>Recent Search</span>
+        <span class="seeAll" [routerLink]="['search']">
+          <span> Voir tous </span>
+          <i class="fas fa-long-arrow-right rightArrow"></i>
+        </span>
+      </h2>
+      <div class="carousel">
+        <app-announce-card
+          *ngFor="let announce of annoncesList"
+          [data]="announce"
+        ></app-announce-card>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  
+
+  <section class="pb-20 relative block bg-blueGray-800">
+    <div
+      class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+      style="transform: translateZ(0)"
+    >
+      <svg
+        class="absolute bottom-0 overflow-hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        version="1.1"
+        viewBox="0 0 2560 100"
+        x="0"
+        y="0"
+      >
+        <polygon
+          class="text-blueGray-800 fill-current"
+          points="2560 0 2560 100 0 100"
+        ></polygon>
+      </svg>
+    </div>
+
+    <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+      
+      
+    </div>
+  </section>
+  <section class="relative block py-24 lg:pt-0 bg-blueGray-800">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+        <div class="w-full lg:w-6/12 px-4">
+          <div
+            class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200"
+          >
+            <div class="flex-auto p-5 lg:p-10">
+              <form [formGroup]="reclamationForm">
+              <h4 class="text-2xl font-semibold">Reclamation</h4>
+              <p class="leading-relaxed mt-1 mb-4 text-blueGray-500">
+                Si vous avez des questions, n'hésitez pas à nous contacter
+              </p>
+              <div class="relative w-full mb-3 mt-8">
+                
+                <label
+                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                  htmlFor="full-name"
+                >
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 form-control"
+                  placeholder="Nom"
+                  name="nom"
+                  id="nom"
+                  formControlName="nom"
+                  required
+                />
+              </div>
+
+              <div class="relative w-full mb-3">
+                <label
+                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                  htmlFor="email"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                  formControlName="email"
+                  required
+                />
+              </div>
+
+              <div class="relative w-full mb-3">
+                <label
+                  class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                  htmlFor="message"
+                >
+                  Message
+                </label>
+                <textarea
+                  rows="4"
+                  cols="80"
+                  class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                  placeholder="Type a message..."
+                  name="message"
+                  id="message"
+                  formControlName="message"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center mt-6">
+                <button
+                  class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  type="submit"
+                  (click)="handleSubmit(reclamationForm)"
+                  [disabled]="!reclamationForm.valid"
+                >
+                  Envoyer reclamation
+                </button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+

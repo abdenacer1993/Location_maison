@@ -1,0 +1,37 @@
+<div class="card doctorCard">
+  <div class="cardHeader">
+    <img
+     [src]="data.image1" 
+      alt="doctor image"
+      class="doctorImage"
+    />
+  </div>
+  <div class="cardBody">
+  <!--   <h2 class="doctorName">{{ announceType }}</h2>-->
+
+    <p class="speciality">{{ data.description }}</p>
+
+    <ul class="availableInfo">
+      <li><i class="fas fa-map-marker-alt"></i>{{ data.adresse }}</li>
+      <li><i class="fas fa-phone-alt"></i>{{ data.telephone }}</li>
+
+      <li><i class="far fa-clock"></i> {{ data.data_av }}</li>
+       <li>
+        <i class="far fa-money-bill-alt"></i> {{ data.prix }}
+        <a
+          href="javascript:void(0)"
+          tooltip="Lorem Ipsum"
+          placement="top"
+          tabindex="0"
+          ><i class="fas fa-info-circle"></i
+        ></a>
+      </li> 
+    </ul>
+  </div>
+  <div class="cardFooter d-flex">
+    <button class="btn actionButton viewProfile" [routerLink]="['/profile', 1]">
+      Voir details
+    </button>
+    
+  </div>
+</div>

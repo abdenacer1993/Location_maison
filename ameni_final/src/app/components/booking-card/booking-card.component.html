@@ -1,0 +1,216 @@
+<div class="col-12">
+  <div class="card infoCard">
+    <div class="cardBody">
+      <div class="bookingDocInfo">
+        <a class="bookingDocImg" href="javascript:void(0)"
+          ><img
+            alt="Doctor Image"
+            class="docImage"
+            src="../../../assets/img/doctors/doctor_1.jpg"
+        /></a>
+        <div class="bookingInfo">
+          <h4 class="docName">
+            <a href="javascript:void(0)" [routerLink]="['/profile', doctorId]"
+              >{{ docData?.firstName }} {{ docData?.lastName }}</a
+            >
+          </h4>
+          <div class="rating">
+            <i class="fas fa-star filled"></i><i class="fas fa-star filled"></i
+            ><i class="fas fa-star filled"></i><i class="fas fa-star filled"></i
+            ><i class="fas fa-star"></i
+            ><span class="d-inline-block average-rating">35</span>
+          </div>
+          <p class="text-muted mb-0 address">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ docData.address }}
+          </p>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <!-- <div class="row dateRow">
+    <div class="col-12 col-sm-4 col-md-6">
+      <h4 class="mb-1 todayDate">10 April 2022</h4>
+      <p class="text-muted todayName">Sunday</p>
+    </div>
+    <div class="col-12 col-sm-8 col-md-6 text-sm-end"></div>
+  </div>
+  <div class="card booking-schedule schedule-widget">
+    <div class="schedule-header">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="day-slot">
+            <ul class="dayList">
+             
+              <li>
+                <span class="day">Mon</span
+                ><span class="slot-date"
+                  >11 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+              <li>
+                <span class="day">Tue</span
+                ><span class="slot-date"
+                  >12 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+              <li>
+                <span class="day">Wed</span
+                ><span class="slot-date"
+                  >13 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+              <li>
+                <span class="day">Thu</span
+                ><span class="slot-date"
+                  >14 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+              <li>
+                <span class="day">Fri</span
+                ><span class="slot-date"
+                  >15 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+              <li>
+                <span class="day">Sat</span
+                ><span class="slot-date"
+                  >16 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+              <li>
+                <span class="day">Sun</span
+                ><span class="slot-date"
+                  >17 Nov <small class="slot-year">2019</small></span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-cont">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="time-slot">
+            <ul class="clearfix timingList">
+              <li>
+                <a class="timing"><span>9:00</span><span>AM</span></a
+                ><a class="timing"><span>10:00</span><span>AM</span></a
+                ><a class="timing"><span>11:00</span><span>AM</span></a>
+              </li>
+              <li>
+                <a class="timing"><span>12:00</span><span>AM</span></a
+                ><a class="timing"><span>01:00</span><span>PM</span></a
+                ><a class="timing"><span>02:00</span><span>PM</span></a>
+              </li>
+              <li>
+                <a class="timing"><span>03:00</span><span>PM</span></a
+                ><a class="timing"><span>04:00</span><span>PM</span></a
+                ><a class="timing"><span>05:00</span><span>PM</span></a>
+              </li>
+              <li>
+                <a class="timing"><span>06:00</span><span>PM</span></a
+                ><a class="timing"><span>07:00</span><span>PM</span></a
+                ><a class="timing"><span>08:00</span><span>PM</span></a>
+              </li>
+              <li>
+                <a class="timing"><span>09:00</span><span>PM</span></a
+                ><a class="timing selected"><span>10:00</span><span>PM</span></a
+                ><a class="timing"><span>11:00</span><span>PM</span></a>
+              </li>
+              <li>
+                <a class="timing"><span>9:00</span><span>AM</span></a
+                ><a class="timing"><span>10:00</span><span>AM</span></a
+                ><a class="timing"><span>11:00</span><span>AM</span></a>
+              </li>
+              <li>
+                <a class="timing"><span>9:00</span><span>AM</span></a
+                ><a class="timing"><span>10:00</span><span>AM</span></a
+                ><a class="timing"><span>11:00</span><span>AM</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <dx-scheduler
+    [dataSource]="dataSource"
+    [views]="views"
+    [currentView]="currentView"
+    [currentDate]="currentDate"
+    [firstDayOfWeek]="0"
+    [startDayHour]="8"
+    [endDayHour]="24"
+    [showAllDayPanel]="false"
+    [height]="600"
+    [maxAppointmentsPerCell]="1"
+    (onAppointmentFormOpening)="onAppointmentFormOpening($event)"
+    (onAppointmentAdding)="onAppointmentAdding($event)"
+    (onAppointmentUpdating)="onAppointmentUpdating($event)"
+  >
+    <!-- appointmentTooltipTemplate="tooltip-template" -->
+    <!-- <dxo-editing [allowAdding]="false"></dxo-editing> -->
+
+    <!-- dataCellTemplate="dataCellTemplate"
+    dateCellTemplate="dateCellTemplate"
+    timeCellTemplate="timeCellTemplate" -->
+    <!-- <div
+      *dxTemplate="let dataCell of 'dataCellTemplate'"
+      [ngClass]="{
+        'disable-date': isDisableDate(dataCell.startDate),
+        dinner:
+          !isDisableDate(dataCell.startDate) && isDinner(dataCell.startDate)
+      }"
+    ></div>
+
+    <div
+      *dxTemplate="let dateCell of 'dateCellTemplate'"
+      [ngClass]="{ 'disable-date': isWeekend(dateCell.date) }"
+    >
+      {{ dateCell.text }}
+    </div>
+
+    <div
+      *dxTemplate="let timeCell of 'timeCellTemplate'"
+      [ngClass]="{ dinner: isDinner(timeCell.date) }"
+    >
+      {{ timeCell.text }}
+      <div *ngIf="hasCoffeeCupIcon(timeCell.date)" class="cafe"></div>
+    </div> -->
+
+    <dxo-editing
+      [allowAdding]="true"
+      [allowDeleting]="false"
+      [allowUpdating]="false"
+      [allowResizing]="false"
+      [allowDragging]="false"
+    ></dxo-editing>
+
+    <div *dxTemplate="let model of 'tooltip-template'">
+      <div class="appointment-tooltip">
+        <div class="appointment-info">
+          <h3 class="appoitmentTitle">
+            {{ getPatientNameById(model.appointmentData.patientId) }}
+          </h3>
+          <p class="appoitmentTime">
+            {{ getFormattedDate(model.appointmentData.startDate) }} -
+            {{ getFormattedDate(model.appointmentData.endDate) }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </dx-scheduler>
+  <div class="submit-section proceed-btn text-end">
+    <button
+      class="btn btn-primary submit-btn payButton"
+      [disabled]="!isAppointmentAdded"
+      (click)="proceedToPay()"
+    >
+      Proceed to Pay
+    </button>
+  </div>
+</div>

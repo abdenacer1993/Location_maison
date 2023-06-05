@@ -1,0 +1,177 @@
+<div
+  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0"
+>
+  <div class="rounded-t bg-white mb-0 px-6 py-6">
+    <div class="text-center flex justify-between">
+      <h6 class="text-blueGray-700 text-xl font-bold">Ajouter Annonce</h6>
+    </div>
+  </div>
+  <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+    <form [formGroup]="infoForm" enctype="multipart/form-data">
+      <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"></h6>
+      <div class="flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Description
+            </label>
+
+            <select
+              name="speciality"
+              id="speciality"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="description"
+            >
+              <option value="" selected disabled hidden>Type</option>
+              <option value="studio">Studio</option>
+              <option value="maison">Maison</option>
+              <option value="appartement">appartement</option>
+            </select>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Adresse
+            </label>
+            <input
+              type="text"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="adresse"
+            />
+          </div>
+        </div> 
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Nom
+            </label>
+            <input
+              type="text"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="nom"
+              readonly="readonly"
+            />
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              prenom
+            </label>
+            <input
+              type="text"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="prenom"
+              readonly="readonly"
+            />
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Telephone
+            </label>
+            <input
+              type="number"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="telephone"
+            />
+          </div>
+        </div>
+        <!-- <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Phone
+            </label>
+            <input
+              type="number"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="phone"
+            />
+          </div> -->
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="relative w-full mb-3">
+            <label
+              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+              htmlFor="grid-password"
+            >
+              Prix
+            </label>
+            <input
+              type="text"
+              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              formControlName="prix"
+            />
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <label
+            class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+            htmlFor="grid-password"
+          >
+            Image
+          </label>
+          <input
+          
+          type="file" 
+          id="images" 
+          formControlName="images" 
+          (change)="onFileChange($event)" 
+          
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            
+          />
+          <!-- <input
+            type="file"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            formControlName="image2"
+          />
+          <input
+            type="file"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            formControlName="image3"
+          />
+          <input
+            type="file"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            formControlName="image4"
+          />
+          <input
+            type="file"
+            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+            formControlName="image5"
+          /> -->
+        </div>
+      
+    </form>
+
+    <button
+      type="button"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded saveButton mx-4 my-4"
+      (click)="handleSubmit()"
+      [disabled]="!infoForm.valid"
+    >
+      Envoyer demande annonce
+    </button>
+  </div>
+</div>

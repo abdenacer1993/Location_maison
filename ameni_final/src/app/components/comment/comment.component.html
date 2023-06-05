@@ -1,0 +1,72 @@
+<div class="commentBlock">
+  <div class="mainContent">
+    <div class="commentHeader">
+      <div class="left">
+        <img
+          src="../../../assets/img/defaultAvatar.jpeg"
+          alt="avatar"
+          class="avatar"
+        />
+        <h3 class="user">{{ comment.email }}</h3>
+      </div>
+      <div class="right">
+        <h4 class="date">{{ comment.date }}</h4>
+      </div>
+    </div>
+    <div class="commentBody">
+      <p class="comment">
+        {{ comment.comment }}
+      </p>
+    </div>
+  </div>
+  <div class="commentFooter" *ngIf="isConnected && isAllowedToReply">
+    <i class="fas fa-thumbs-up likeIcon"></i>
+    <i class="fas fa-comment-alt respondIcon" (click)="toggleReplyBox()"></i>
+  </div>
+  <div class="replyContent">
+    <div class="mainContent">
+      <div class="commentHeader">
+        <div class="left">
+          <img
+            src="../../../assets/img/defaultAvatar.jpeg"
+            alt="avatar"
+            class="avatar"
+          />
+          <h3 class="user">{{ doctorData.email }}</h3>
+        </div>
+        <div class="right">
+          <h4 class="date">24-04-2022</h4>
+        </div>
+      </div>
+      <div class="commentBody">
+        <p class="comment">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+          at.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="replyBox"
+    [class.show]="isShowReply === true"
+    *ngIf="isConnected && isAllowedToReply"
+  >
+    <form [formGroup]="formReply" (ngSubmit)="handleSubmit($event)">
+      <textarea
+        name="reply"
+        id="reply"
+        class="reply"
+        cols="30"
+        rows="3"
+        formControlName="reply"
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded submitReply"
+        [disabled]="!formReply.valid"
+      >
+        Envoyer
+      </button>
+    </form>
+  </div>
+</div>

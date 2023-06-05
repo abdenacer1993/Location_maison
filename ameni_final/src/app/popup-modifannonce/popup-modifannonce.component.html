@@ -1,0 +1,111 @@
+<h1 mat-dialog-title>Modifier mon congie</h1>
+<div mat-dialog-content style="width: 600px">
+  <form [formGroup]="angForm" (ngSubmit)="postdata(angForm.value)">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              type="text"
+              name="nom"
+              formControlName="nom"
+              autocomplete="off"
+              placeholder="Nom"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              type="text"
+              name="prenom"
+              formControlName="prenom"
+              autocomplete="off"
+              placeholder="Prenom"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              type="text"
+              name="prix"
+              formControlName="prix"
+              autocomplete="off"
+              placeholder="Prix"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              type="text"
+              name="description"
+              formControlName="description"
+              autocomplete="off"
+              placeholder="Description"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              type="text"
+              name="email"
+              formControlName="email"
+              autocomplete="off"
+              placeholder="Email"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+          <mat-form-field class="example-full-width">
+            <input
+              matInput
+              name="images"
+              type="file"
+              id="images"
+              formControlName="images"
+            />
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close="">
+          Close
+        </button>
+        <button
+          style="margin-left: 8px"
+          mat-raised-button
+          color="primary"
+          [mat-dialog-close]="true"
+          type="submit"
+        >
+          Modifier
+        </button>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </form>
+</div>
