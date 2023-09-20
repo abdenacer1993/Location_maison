@@ -47,11 +47,11 @@ CREATE TABLE `annonces` (
 --
 
 INSERT INTO `annonces` (`id`, `id_user`, `etat`, `prix`, `description`, `data_av`, `adresse`, `image1`, `telephone`, `type`, `nom`, `prenom`) VALUES
-(3, 18, 'en cours...', 5000.00, 'maison', '2023-06-02', 'Tunis', '../../../assets/img/home1.jpg', 0, '', 'ahmed', 'test'),
+(3, 18, 'en cours...', 5000.00, 'maison', '2023-06-02', 'Tunis', '../../../assets/img/home1.jpg', 0, '', 'nacer', 'test'),
 (4, 18, 'Accepted', 5478.00, 'appartement', '2023-06-02', 'ddqzf', '../../../assets/img/home1.jpg', 59564, '', 'ahmed', 'test'),
-(5, 19, 'en cours...', 2500.00, 'maison', '2023-06-02', 'Sidi bouzid', '../../../assets/img/home1.jpg', 5789256, '', 'ahmed', 'test'),
-(6, 18, 'Accepted', 58265.00, 'maison', '2023-06-02', 'Gabes', '../../../assets/img/home1.jpg', 516, '', 'ahmed', 'test'),
-(7, 18, 'Accepted', 366565.00, 'studio', '2023-06-02', 'Ariana', '../../../assets/img/home1.jpg', 56456, '', 'ahmed', 'test');
+(5, 19, 'en cours...', 2500.00, 'maison', '2023-06-02', 'Sidi bouzid', '../../../assets/img/home1.jpg', 5789256, '', 'azerty', 'test'),
+(6, 18, 'Accepted', 58265.00, 'maison', '2023-06-02', 'Gabes', '../../../assets/img/home1.jpg', 516, '', 'test', 'test'),
+(7, 18, 'Accepted', 366565.00, 'studio', '2023-06-02', 'Ariana', '../../../assets/img/home1.jpg', 56456, '', 'user', 'test');
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE `reclamation` (
 INSERT INTO `reclamation` (`id`, `nom`, `email`, `message`) VALUES
 (1, 'ahmed', 'mr.smoke2015@gmail.com', 'dzefergfser'),
 (10, 'ahmed', 'ah@gmail.com', 'daefazdzad dazd'),
-(15, 'grthtrh', 'ah@gmail.com', 'yryd'),
+(15, 'grthtrh', 'ahr@gmail.com', 'yryd'),
 (17, 'ahmed', 'etudiant@gmail.comd', 'dazgrg');
 
 -- --------------------------------------------------------
@@ -101,13 +101,13 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `nom`, `prenom`, `email`, `password`, `telephone`, `role`, `prof`, `adresse`) VALUES
 (2, '', '', '', '', '', 'admin', 'testprof', ''),
 (11, 'nommmm', 'prenom', 'etudiant@gmail.com', '123456', '123456', 'simpleAdmin', 'Travailler', 'paspasss'),
-(16, 'ahmed', 'boulaabiiiii', 'admin@gmail.com', '123456', '123456', 'admin', 'Travailler', 'adresse'),
+(16, 'user', 'ben test', 'admin@gmail.com', '123456', '123456', 'admin', 'Travailler', 'adresse'),
 (18, 'ahmed', 'test', 'user@gmail.com', '123456', '123456', 'user', 'Etudiant', 'ffsdsfds'),
-(26, 'Abnacer', 'hasnaoui', 'ahkkkk@gmail.com', '2561468', '5589648', 'user', 'Etudiant', 'gafsa'),
+(26, 'Abdnacer', 'hasnaoui', 'abdenacer1993@gmail.com', '2561468', '5589648', 'user', 'Etudiant', 'gafsa'),
 (27, 'fsf', 'fqsdf', 'dezd@dez.com', '', '498', 'simpleAdmin', 'Travailler', 'fdsqf'),
 (30, 'fdszfq', 'fsqdf', 'ahmed.boulaabi.186@gmail.com', '6514986', '2561', 'simpleAdmin', 'Travailler', 'fqsdf'),
-(31, 'ahmed', 'ahmed', 'mr.smoke2dsff015@gmail.com', '123456', '6565', 'user', 'Etudiant', 'Gafsa'),
-(33, 'fdf', 'fsdfds', 'ahmed.boulaabi.18fdsfds6@gmail.com', '65652', '21651565', 'user', 'Travailler', 'BP 73 poste zarroug 2112 Gafsa'),
+(31, 'ah', 'ah', 'mr.5@gmail.com', '123456', '6565', 'user', 'Etudiant', 'Gafsa'),
+(33, 'fdf', 'fsdfds', 'test.5@gmail.com', '65652', '21651565', 'user', 'Travailler', 'BP 73 poste zarroug 2112 Gafsa'),
 (35, 'ezer', 'zerzer', 'etufgfdgdiant@gmail.com', '15162', '65465', 'user', 'Travailler', 'rzerzer');
 
 --
